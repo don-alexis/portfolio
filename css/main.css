@@ -1,0 +1,2667 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+body{
+    background-color: #151515;
+    overflow: auto;
+
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+    overflow: auto;
+}
+
+html {
+    /* font-size: 1em; */
+    /* line-height: 1.4; */
+    /* width: 100%; */
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    /* background: #b3d4fc; */
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+a, a:visited, a:hover, a:active {
+  /* color: inherit; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    display:block;
+}
+header{
+    background-color:white;
+    height:100px;
+    width:100%;
+    position:fixed;
+    top:0px;
+    z-index:10000000;
+}
+header nav{  width:50%;  position:absolute;  top: 45px;   left:75px}
+header nav a{ text-decoration:none; width: 115px; text-align: left; display:inline-block; visibility: visible; text-transform: uppercase; color: rgb(45, 42, 45); font-size: 1.2em;}
+header h4{ background-color:white; width:200px; float:right; margin-top:50px; text-align:left; font-weight:700;}
+ #titleHolder{
+        background-image: url('../img/my_icon.svg');
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size: 104%;
+        padding:0px;
+        width: 60px;
+        height: 64px;
+        background-color:white;
+        margin:25px 25px 0px 0px;
+        float:right;
+}
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    /* margin-bottom: -21px; */
+    /* padding-bottom: 203px; */
+    /* padding-top: 100px; */
+    z-index:-10000000;
+}
+#loading{
+    background-image: url('../img/716.GIF');
+    background-repeat: no-repeat;
+    background-position:center center;
+    width:70%; height:20%; 
+    margin:auto; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    bottom:0; right:0; 
+    padding:10px;
+    opacity:0; 
+    z-index:100000000; 
+  
+}
+#content{
+    height:auto;
+    width:80%;
+    max-width:1600px;
+    opacity:0;
+    margin-bottom:0px;
+    /* background-color: yellow; */
+}
+#portfolio{
+    height:auto;
+    margin-bottom: 75px;
+    /* margin-top: -19px; */
+}
+
+
+.textContent h1{
+    color:#f1f1fa;
+    font-weight: 200;
+}
+.textContent h2{
+    font-size:.7em;
+    color: whitesmoke;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.8em;
+}
+.textContent p{
+    font-size:1.2em;
+    font-weight:200;
+    line-height: 1.9em;
+}
+.textContent a{
+    text-decoration: none;
+    color:#97969e;
+}
+.textContent a:hover{
+    text-decoration: none;
+    color:#454448;
+}
+.imagery{
+    background-color:#151515;
+    padding:65px 25px 25px 25px;
+}
+.image{
+    width:100%;
+    height: 900px;
+    max-width: 1600px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom:50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#closer{
+    width:100px;
+    height:100px;
+    background-color:black;
+    float:right;
+}
+#container{
+    margin: 81px auto 0px auto;
+    padding:0px;
+    z-index:-10000000;
+    height:auto;
+
+    /* margin-top: 55px; */
+}
+
+ul{
+    margin:0px auto 0px auto;
+    padding:0px;
+}
+li {
+    list-style: none;
+    width:25%;
+    background-color:white;
+    margin:0px;
+    float:left;
+    position:relative;
+    cursor: pointer;
+
+   }
+#dimmer{
+    width:100%;
+    height:100%;
+    background-color:rgba(29,30,25,.7);
+    z-index:10000;
+}
+li div{ width:70%; height:20%; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; padding:10px;opacity:0; color:white; z-index:1000000; }
+
+li h3{width:80%; margin:auto; text-align:center; font-weight:200; font-family: 'helvetica', sans-serif; font-size: 2.5em;}
+li h4{width:80%; margin:auto; text-align:center; font-weight:200;}
+footer{
+    width:100%;
+    height:100px;
+    position:fixed;
+    /* margin-top: 160px; */
+    bottom:0px;
+    overflow: hidden;
+   
+    z-index:1000000000;
+}
+#footHold{
+    width:100%;
+    height:100px;
+    background-color:white;
+    position:absolute;
+    bottom:-100px;
+    z-index:100000000000;
+
+}
+#footHold nav{
+    width: 125px;
+    height:50px;
+    float:right;
+    margin-top:25px;
+    /* background-color: red; */
+}
+.icon{
+    width:45px;
+    height:45px;
+    float:left;
+    margin-left:5px;
+    /* background-size: 100%; */
+   
+  
+    /* background-repeat: no-repeat; */
+}
+
+#linkedin{background-image:url('../img/_icons/_social_icons_black.svg');background-repeat: no-repeat;background-position: center -1px;background-size: 100%;/* background-color: white; */}
+#email{background-image:url('../img/_icons/_social_icons_black.svg');background-size: 100%;background-repeat: no-repeat;/* background-color: orangered; */background-position: center -91px;}
+
+li:nth-child(1){background-image:url('../img/indexpage/_001.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(2){background-image:url('../img/indexpage/_0002.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(3){background-image:url('../img/indexpage/_0003.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(4){background-image:url('../img/indexpage/_0004.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(5){background-image:url('../img/indexpage/_0005.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(6){background-image:url('../img/indexpage/_0006.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(7){background-image:url('../img/indexpage/_0007.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(8){background-image:url('../img/indexpage/_0008.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(9){background-image:url('../img/indexpage/_0009.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(10){background-image:url('../img/indexpage/_0010.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(11){background-image:url('../img/indexpage/_0011.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(12){background-image:url('../img/indexpage/_0012.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(13){background-image:url('../img/indexpage/_0013.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(14){background-image:url('../img/indexpage/_0014.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+
+
+
+#formHolder{
+    width: 95%;
+    max-width: 1400px;
+    height:auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin:125px auto 100px auto;
+    color:#5e5e5e;
+    font-weight:200;
+    letter-spacing:1px;
+}
+#formHolder h1{
+    font-weight:200;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#9b9b9b;
+    margin-bottom: 0px;
+
+}
+form h4{
+    width:100%;
+    padding-top: 25px;
+   padding-bottom:0px;
+   margin:2px 0px 2px 0px;
+   font-weight:200;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+    font-size: 1em;
+   letter-spacing:1px;
+ 
+}
+label{
+    margin-top: 3px;
+
+    /* height: 75px; */
+}
+.namerow{
+    width:45%;
+    float:left;
+    margin-bottom: 16px;
+
+
+}
+.namerow:nth-child(2){
+    margin-right:10%;
+}
+.namerow input{
+    width:100%;
+    height: 40px;
+}
+.row{
+    width:100%;
+    /* margin-bottom: 30px; */
+
+    height: 149px;
+}
+.row input{
+    width:100%;
+     
+    height: 50px;
+    margin-bottom: 0px;
+   
+}
+textarea{
+    width:100%;
+    height: 200px;
+    margin-bottom: 24px;
+    margin-top: 4px;
+}
+input[type=submit]{
+    width:100px;
+    margin-top: 140px;
+    margin-bottom: 30px;
+    background-color:#1d1d1d;
+    height: 30px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+}
+.target{
+    width:80%;
+    
+    background-color:#262626;
+    margin:25px auto 25px auto;
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+
+    /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 FOR PHONES ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_mobile/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_mobile/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_mobile/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_mobile/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_mobile/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2  FOR PHONES----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_mobile/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_mobile/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_mobile/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_mobile/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_mobile/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_mobile/_0011.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_mobile/_0012.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_mobile/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_mobile/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_mobile/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 FOR PHONES ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_mobile/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_mobile/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_mobile/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+iframe {
+  color:#4D4D4D;
+  height: 700px;
+  /* background-color: red; */
+}  
+
+}
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    /* margin-bottom: -21px; */
+    /* padding-bottom: 203px; */
+    /* padding-top: 81px; */
+    z-index:-10000000;
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-device-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-device-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+    header{
+        /*background-color:green;*/
+    }
+iframe {
+  color:#4D4D4D;
+  height: 700px;
+  /* background-color: red; */
+}    
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------iPads (Orientation:landscape) ----------- */
+@media  (min-width : 762px) and (max-width : 1024px)  {
+/* Styles */
+li{
+        width:25%;
+        min-height:359px;
+    }
+header{
+        background-color:white;
+    }
+.image{
+    width:100%;
+    height: 550px;
+    max-width: 1600px;
+    background-color:white;
+    margin-bottom:50px;
+}
+   #content{
+        width:100%;
+    }
+    .textContent{
+    width:100%;
+    background-color:#151515;
+    height: auto;
+    color:#5f5f63;
+    padding:35px;
+    /* margin-top: 100px; */
+}
+    .imagery{
+    width: 100%;
+    padding:65px 25px 25px 25px;
+    }
+     /* this is for the about page*/
+#aboutcontainer{
+    width: 100%;
+    /* max-width: 1700px; */
+    /* margin:100px auto 0px auto; */
+    /* padding-right: 13px; */
+    
+    /* background-color: yellow; */
+    /* margin-left: auto; */
+    margin: auto;
+    /* margin-right: auto; */
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    /* height: 90%; */
+    left: 18px;
+    right: 0px;
+    /* bottom: 0px; */
+}
+.textContent-me{
+    width:48%;
+    float:left;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px;
+}
+.textContent-me p{
+  
+    margin:0px;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    height:auto;
+}
+
+iframe {
+  color:#4D4D4D;
+  height: 700px;
+  /* background-color: red; */
+}
+
+    /* ------------------------------------------------------------------------------------------------------------------Gallery 1 ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_mobile/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_mobile/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_mobile/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_mobile/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_mobile/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------Gallery 2 ----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_mobile/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_mobile/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_mobile/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_mobile/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_mobile/_0011.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_mobile/_0012.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_mobile/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_mobile/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 FOR PHONES ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_mobile/_0001.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_mobile/_0002.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_mobile/_0003.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_mobile/_0004.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_mobile/_0005.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_mobile/_0006.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_mobile/_0007.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_mobile/_0008.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_mobile/_0009.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_mobile/_0010.jpg'); background-size:95%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_mobile/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+iframe {
+  color:#4D4D4D;
+  height: 700px;
+  /* background-color: red; */
+}    
+
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-width : 200px) and (max-width : 480px) {
+/* Styles */
+li{
+    height:90px;
+}
+    header{
+        /* background-color: rgb(0, 255, 31); */
+        height:60px;
+    
+        box-shadow: 1px 1px 2px rgb(173, 173, 173);
+}
+    header h4{
+        height:20px;
+        margin: 23px 35px 0px -100px;
+        width:150px;
+        z-index:-10000;
+    }
+
+      header nav{
+        top:0px;
+        width: 76%;
+        /* background-color: rgb(255, 255, 255); */
+        margin:0px auto 0px auto;
+    
+        /* height: 85px; */
+        left: 0px;
+    }
+    header nav a{
+        width: 70px;
+        text-align:center;
+        height: 36px;
+        padding-top: 14px;
+        margin-left: 6px;
+        margin-top: 10px;
+        margin-bottom: 1px;
+        background-color: rgba(19, 16, 16, 1);
+        visibility:hidden;
+        font-size: .6em;
+        letter-spacing: 1.8px;
+        font-weight: 200;
+        /* border-bottom: 1px solid rgb(213, 206, 206); */
+        color: white;
+        /* border-top: 1px solid rgb(213, 206, 206); */
+}
+ #titleHolder{
+        background-image: url('../img/my_icon.svg');
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100%;
+        padding:0px;
+        width:50px;
+        height:50px;
+        background-color:white;
+        margin: 6px 6px 0px 0px;
+        float:right;
+      
+    
+        /* line-height: 2.3em; */
+}
+    #mobileIcon{
+        width:60px;
+        float: left;
+        height: 60px;
+        margin: 0px 0px 0px 5px;
+        margin-right: 0px;
+        /* background-color: rgb(253, 253, 245); */
+        cursor: pointer;
+        background-image: url('../img/threelines.png');
+        background-size: 133%;
+        background-repeat: no-repeat;
+        background-position: -11px 2px;
+        margin-bottom: 0px;
+}
+    li{
+        width:50%;
+        height: 125px;
+    }
+    li div{  width:90%; height:40%; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; padding:10px;}
+    li h3{width:100%; margin: auto; text-align:center; font-size:.7em;}
+    li h4{width:100%; margin: auto; text-align:center; font-size:.5em; visibility: hidden;}
+    #content{
+        width:100%;
+    }
+    #container{
+        margin:auto;
+    }
+    .textContent{
+        width:100%;
+        background-color:#151515;
+        color:#5f5f63;
+        padding:15px;
+    }
+    .textContent h1{
+        font-size:1em;
+    }
+    .textContent p{
+        font-size: .8em;
+        line-height: 1.4em;
+
+    }
+    .imagery{
+        position: relative;
+        width:100%;
+        padding:0px;
+        background-color: #FDFDFD;
+    }
+    .image{
+    width:100%;
+    height: 300px;
+    background-color:#FDFDFD;
+    background-size:100%;
+    margin-bottom: 25px;
+}
+    #formHolder{
+    width:90%;
+    max-width:1800px;
+    height:auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin:55px auto 0px auto;
+    color:#5e5e5e;
+    font-weight:200;
+    letter-spacing:1px;
+}
+#formHolder h1{
+    font-weight:200;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#9b9b9b;
+    margin-bottom: 0px;
+
+}
+form h4{
+    width:100%;
+    padding-top:20px;
+   padding-bottom:0px;
+   margin:2px 0px 2px 0px;
+   font-weight:200;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size:1.5em;
+   letter-spacing:1px;
+ 
+}
+label{
+    margin-top:2px;
+    
+}
+.namerow{
+    width: 100%;
+    float:left;
+    margin-bottom: 15px;
+    
+    
+}
+.namerow:nth-child(2){
+    margin-right:10%;
+}
+.namerow input{
+    width:100%;
+    height:50px;
+}
+.row{
+    width:100%;
+    /* margin-bottom: 100px; */
+    
+}
+.row input{
+    width:100%;
+     height:50px;
+    margin-bottom: 30px;
+   
+}
+#emailsec{
+    margin-bottom:250px;
+    height: 200px;
+}
+#sbmt{
+    height: 130px;
+}
+textarea{
+    width:100%;
+    height: 200px;
+    margin-bottom: 13px;
+}
+input[type=submit]{
+    width:100px;
+    margin-bottom: 30px;
+    background-color:#1d1d1d;
+    color:white;
+}
+.target{
+    width:80%;
+    
+    background-color:#262626;
+    margin:25px auto 25px auto;
+
+}
+#selfie h2{
+    height:30px;
+    background-color:red;
+}
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    /* margin-bottom: -21px; */
+    /* padding-bottom: 203px; */
+    padding-top: 40px;
+    z-index:-10000000;
+}
+
+
+
+.image{
+    width:100%;
+    height: 200px;
+    max-width: 1600px;
+    background-color:white;
+    margin-bottom:50px;
+}
+   #content{
+        width:100%;
+    }
+    .textContent{
+    width:100%;
+    background-color:#151515;
+    height: auto;
+    color:#5f5f63;
+    padding: 45px;
+    margin-top: 0px;
+    line-height: 3.9em;
+}
+    .imagery{
+    width: 100%;
+    padding:65px 25px 25px 25px;
+    }
+     /* this is for the about page*/
+#aboutcontainer{
+    width: 95%;
+    /* max-width: 1700px; */
+    /* margin:100px auto 0px auto; */
+    /* padding-right: 13px; */
+    
+    /* background-color: yellow; */
+    /* margin-left: auto; */
+    margin: auto;
+    /* margin-right: auto; */
+    /* overflow-x: hidden; */
+    /* position: absolute; */
+    /* top: 0px; */
+    /* height: 90%; */
+    /* left: 18px; */
+    /* right: 0px; */
+    /* bottom: 0px; */
+}
+.textContent-me{
+    width: 95%;
+    margin: 100px auto 0px auto;
+    /* float:left; */
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    /* margin-bottom: 100px; */
+}
+.textContent-me p{
+  
+    margin:0px;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    height:auto;
+}
+
+iframe {
+  color:#4D4D4D;
+  height: 273px;
+  width: 100%;
+  /* background-color: red; */
+}
+
+
+
+    /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 FOR PHONES ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_mobile/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_mobile/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_mobile/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_mobile/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_mobile/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2  FOR PHONES----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_mobile/_0001.jpg'); background-size: 53%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_mobile/_0002.jpg'); background-size: 49%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_mobile/_0003.jpg'); background-size: 69%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_mobile/_0004.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_mobile/_0005.jpg'); background-size: 71%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_mobile/_0002.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_mobile/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_mobile/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_mobile/_0011.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_mobile/_0012.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_mobile/_0002.jpg'); background-size: 81%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_mobile/_0003.jpg'); background-size: 84%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_mobile/_0004.jpg'); background-size: 86%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_mobile/_0005.jpg'); background-size: 91%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_mobile/_0006.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_mobile/_0007.jpg'); background-size: 79%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_mobile/_0008.jpg'); background-size: 79%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_mobile/_0009.jpg'); background-size: 81%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_mobile/_0010.jpg'); background-size: 88%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 FOR PHONES ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_mobile/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_mobile/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_mobile/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size: 72%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size: 73%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size: 76%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size: 77%; background-position: center center; background-repeat:no-repeat;}
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------MEDIA QUERY FOR TABLETS ----------- */
+
+
+@media (min-width : 481px) and (max-width : 761px) {
+
+iframe {
+  color:#4D4D4D;
+  height: 500px;
+  width: 100%;
+  /* background-color: red; */
+}
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    /* margin-bottom: -21px; */
+    padding-bottom: 0px;
+    /* padding-top: 81px; */
+    z-index:-10000000;
+}
+
+    /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 FOR PHONES ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_mobile/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_mobile/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_mobile/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_mobile/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_mobile/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2  FOR PHONES----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_mobile/_0001.jpg'); background-size: 59%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_mobile/_0002.jpg'); background-size: 53%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_mobile/_0003.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_mobile/_0004.jpg'); background-size: 77%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_mobile/_0005.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_mobile/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_mobile/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_mobile/_0011.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_mobile/_0012.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_mobile/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_mobile/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 FOR PHONES ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_mobile/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_mobile/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_mobile/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_mobile/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_mobile/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_mobile/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_mobile/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_mobile/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_mobile/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_mobile/_0001.jpg'); background-size: 73%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_mobile/_0002.jpg'); background-size: 76%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_mobile/_0003.jpg'); background-size: 73%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_mobile/_0004.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_mobile/_0005.jpg'); background-size: 68%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_mobile/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_mobile/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_mobile/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_mobile/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_mobile/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_mobile/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_mobile/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_mobile/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_mobile/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size: 63%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* Styles */
+    header{
+        /* background-color: rgb(255, 0, 214); */
+    
+        box-shadow: 1px 1px 2px rgb(173, 173, 173);
+}
+    header nav{
+        top:0px;
+        width: 100%;
+        /* background-color: red; */
+        margin:0px auto 0px auto;
+    
+        height: 100px;
+        left: 0px;
+    }
+    header nav a{
+        width: 20%;
+        text-align:center;
+        height: 41px;
+        padding-top: 10px;
+        margin-top: 28px;
+        margin-bottom: 1px;
+        background-color: rgba(9, 8, 8, 1);
+        visibility:hidden;
+        /* border-bottom: 1px solid rgb(213, 206, 206); */
+        color: white;
+        letter-spacing: 1.5px;
+        font-weight: 200;
+        /* border-top: 1px solid rgb(213, 206, 206); */
+}
+    #mobileIcon{
+        width: 67px;
+        float: left;
+        height: 63px;
+        margin: 15px;
+        background-color: rgb(253, 253, 245);
+        cursor: pointer;
+        background-image: url('../img/threelines.png');
+        background-size: 133%;
+        background-repeat: no-repeat;
+        background-position: -11px 2px;
+        margin-bottom: 27px;
+}
+    li{
+        width:100%;
+        min-height:350px;
+        float:none;
+    }
+    #content{
+        width:100%;
+    }
+    .textContent{
+        width:100%;
+        background-color:#151515;
+        color:#5f5f63;
+        padding:35px;
+    
+        margin-top: 35px;
+}
+    .imagery{
+        position: relative;
+        width:100%;
+        padding:25px;
+    }
+    .image{
+        height:390px;
+        margin-bottom: 25px;
+    }
+    #formHolder{
+    width:80%;
+    max-width:1800px;
+    height:auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin:125px auto 100px auto;
+    color:#5e5e5e;
+    font-weight:200;
+    letter-spacing:1px;
+}
+#formHolder h1{
+    font-weight:200;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#9b9b9b;
+    margin-bottom: 0px;
+
+}
+form h4{
+    width:100%;
+    padding-top:50px;
+   padding-bottom:0px;
+   margin:2px 0px 2px 0px;
+   font-weight:200;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size:1.5em;
+   letter-spacing:1px;
+ 
+}
+label{
+    margin-top:7px;
+
+}
+.namerow{
+    width: 100%;
+    float:left;
+    margin-bottom: 35px;
+
+
+}
+.namerow:nth-child(2){
+    margin-right:10%;
+}
+.namerow input{
+    width:100%;
+    height:50px;
+}
+.row{
+    width:100%;
+    margin-bottom: 100px;
+
+}
+.row input{
+    width:100%;
+     height:50px;
+    margin-bottom: 30px;
+   
+}
+#emailsec{
+    /* margin-bottom:50px; */
+    height: 200px;
+}
+#sbmt{
+    height: 130px;
+}
+textarea{
+    width:100%;
+    height: 200px;
+    margin-bottom: 13px;
+}
+input[type=submit]{
+    width:100px;
+    margin-bottom: 30px;
+    background-color:#1d1d1d;
+    color:white;
+}
+.target{
+    width:80%;
+    
+    background-color:#262626;
+    margin:25px auto 25px auto;
+
+}
+/* this is for the about page*/
+#aboutcontainer{
+    width: 92%;
+    /* max-width: 1700px; */
+    /* margin:100px auto 0px auto; */
+    /* padding-right: 13px; */
+    
+    /* background-color: yellow; */
+    /* margin-left: auto; */
+    margin: auto;
+    /* margin-right: auto; */
+    overflow-x: hidden;
+    position: absolute;
+    top: 121px;
+    /* height: 90%; */
+    left: 0px;
+    right: 0px;
+    /* bottom: 0px; */
+}
+.textContent-me{
+    width: 100%;
+    margin-top: 50px;
+    /* float:left; */
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+.textContent-me p{
+  
+    margin:0px;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    height:auto;
+}
+
+
+  
+
+   
+   
+}
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width: 762px) and (max-width: 1223px) {
+/* Styles */
+    header{
+        background-color: white;
+    
+        box-shadow: 1px 1px 2px rgb(173, 173, 173);
+}
+    
+header nav{  width:50%;  position:absolute;  top: 45px;   left: 45px;  /* text-align: center; */}
+header nav a{ text-decoration:none; width: 115px; text-align: left; display:inline-block; text-transform: uppercase; visibility: visible; /* background-color: rgb(238, 14, 14); */ color: rgb(47, 46, 47); font-size: 1.2em;}
+header h4{ background-color:white; width:200px; float:right; margin-top:50px; text-align:left; font-weight:700;}
+    li{
+        width:50%;
+        min-height:359px;
+    }
+    #content{
+        width:100%;
+    }
+    .textContent{
+    width:100%;
+    background-color:#151515;
+    /* min-height: 800px; */
+    color:#5f5f63;
+    padding:35px;
+    text-decoration: none;
+    /* margin-top: 50px; */
+    /* color: white; */
+}
+    .imagery{
+    width: 100%;
+    padding:65px 0px 25px 0px;
+    }
+     /* this is for the about page*/
+#aboutcontainer{
+    width: 100%;
+    /* max-width: 1700px; */
+    /* margin:100px auto 0px auto; */
+    /* padding-right: 13px; */
+    
+    /* background-color: yellow; */
+    /* margin-left: auto; */
+    margin: auto;
+    /* margin-right: auto; */
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    /* height: 90%; */
+    left: 18px;
+    right: 0px;
+    /* bottom: 0px; */
+}
+.textContent-me{
+    width:48%;
+    margin-top:100px;
+    float:left;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px;
+}
+.textContent-me p{
+  
+    margin:0px;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    height:auto;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2 ----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat; background-color: #0000d2;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_0011.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_0012.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_0001.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+ 
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+iframe{color:#4D4D4D;height: 700px;}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_0001.jpg'); background-size: 89%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_0002.jpg'); background-size: 89%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_0003.jpg'); background-size: 82%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_0005.jpg'); background-size: 84%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size: 82%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size: 75%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size: 83%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    /* margin-bottom: -21px; */
+    /* padding-bottom: 79px; */
+    padding-top: 0px;
+    z-index:-10000000;
+}
+
+iframe{
+  color:#4D4D4D;
+  height:700px;
+  /* background-color: red; */
+}
+
+}
+
+/* Desktops and laptops ----------- */
+@media  (min-width : 1224px) and (max-width : 1883px) {
+
+
+    #container{
+    margin: 81px auto 0px auto;
+    padding:0px;
+    z-index:-10000000;
+    /* height:auto; */
+
+    /* margin-top: 55px; */
+}
+/* Styles */
+header{
+        /*background-color:yellow;*/
+    
+        box-shadow: 1px 1px 2px rgb(173, 173, 173);
+}
+    header nav{  width:50%;  position:absolute;  top: 45px;   left: 45px;}
+    header nav a{ text-decoration:none; width: 115px; text-align: left; display:inline-block; visibility: visible; /* background-color: rgb(238, 14, 14); */ color: rgb(45, 42, 45); font-size: 1.2em;}
+    header h4{ background-color:white; width:200px; float:right; margin-top:50px; text-align:left; font-weight:700;}
+    li{
+        width:33.33%;
+        min-height:384px;
+    }
+    .textContent{
+    width:70%;
+    background-color:#151515;
+    height:auto;
+    
+    color:#5f5f63;
+    padding:35px;
+    margin-top: 100px;
+}
+    .imagery{
+    width: 100%;
+    padding: 65px 0px 0px 0px;
+    }
+    /* this is for the about page*/
+#aboutcontainer{
+    width: 99%;
+    /* max-width: 1700px; */
+    /* margin:100px auto 0px auto; */
+    /* padding-right: 13px; */
+    
+    /* background-color: yellow; */
+    /* margin-left: auto; */
+    margin: auto;
+    /* margin-right: auto; */
+    overflow-x: hidden;
+    position: absolute;
+    top: 121px;
+    /* height: 90%; */
+    left: 45px;
+    right: 0px;
+    /* bottom: 0px; */
+}
+.textContent-me{
+    width: 46%;
+    margin: 100px 0px 0px 36px;
+    float:left;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+.textContent-me p{
+  
+    margin:0px;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    height:auto;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2 ----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_0001.jpg'); background-size: 54%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_0002.jpg'); background-size: 50%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_0003.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_0004.jpg'); background-size: 76%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_0005.jpg'); background-size: 77%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_0002.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;background-color:#0400c4;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size: 73%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size: 79%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size: 72%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_0001.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_0002.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_0003.jpg'); background-size: 58%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_0004.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_0005.jpg'); background-size: 63%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_0006.jpg'); background-size: 60%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_0007.jpg'); background-size: 79%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_0008.jpg'); background-size: 77%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_0009.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_0010.jpg'); background-size: 55%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_0011.jpg'); background-size: 69%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_0012.jpg'); background-size: 100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;/* margin: auto; */}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_0002.jpg'); background-size: 75%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_0003.jpg'); background-size: 76%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_0004.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_0005.jpg'); background-size: 86%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_0006.jpg'); background-size: 68%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_0007.jpg'); background-size: 71%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_0008.jpg'); background-size: 75%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_0009.jpg'); background-size: 76%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_0010.jpg'); background-size: 81%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_0001.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+ 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_0001.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_0002.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_0003.jpg'); background-size: 58%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_0004.jpg'); background-size: 62%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_0005.jpg'); background-size: 58%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_0001.jpg'); background-size: 69%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_0002.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_0003.jpg'); background-size: 63%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_0004.jpg'); background-size: 68%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_0005.jpg'); background-size: 39%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_0006.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_0007.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_0008.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size: 59%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size: 65%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size: 100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    /* margin-bottom: -21px; */
+    padding-bottom: 0px;
+    /* padding-top: 100px; */
+    overflow: auto;
+    z-index:-10000000;
+}
+
+iframe {
+  color:#4D4D4D;
+  height: 1000px;
+  /* background-color: red; */
+}
+
+}
+
+  
+
+/* Large screens ----------- */
+@media  screen and (min-width : 1884px) {
+/* Styles */
+    header{
+        /*background-color:red;*/
+    
+        box-shadow: 1px 1px 2px rgb(173, 173, 173);
+}
+    #portfolio{
+        width:100%;
+    
+        margin-bottom: 300px;
+}
+    li {
+    list-style: none;
+    width:25%;
+    min-height:440px;
+    background-color:white;
+    margin:0px;
+    float:left;
+    position:relative;
+    cursor: pointer;;
+    }
+    .textContent{
+    float:left;
+    max-width:475px;
+    background-color:#151515;
+    height: auto;
+    color: #909090;
+    padding:35px;
+    margin-top: 100px;
+}
+    .imagery{
+    width: 70%;
+    max-width: 21000px;
+    float:left;
+    padding:65px 25px 25px 25px;
+    /* margin-bottom: 250px; */
+    margin-top: 100px;
+}
+
+
+
+    /* this is for the about page*/
+#aboutcontainer{
+    width: 99%;
+    /* max-width: 1700px; */
+    /* margin:100px auto 0px auto; */
+    /* padding-right: 13px; */
+    
+    /* background-color: yellow; */
+    /* margin-left: auto; */
+    margin: auto;
+    /* margin-right: auto; */
+    overflow-x: hidden;
+    position: absolute;
+    top: 121px;
+    /* height: 90%; */
+    left: 110px;
+    right: 0px;
+    /* bottom: 0px; */
+}
+.textContent-me{
+    width: 40%;
+    max-width: 650px;
+    margin-top:100px;
+    float:left;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin-left: 105px;
+    margin-bottom: 100px;
+}
+.textContent-me p{
+  
+    margin:0px;
+    color:#898989;
+    font-size:.9em;
+    font-weight:200;
+    line-height: 2em;
+    letter-spacing: 1px;
+    height:auto;
+}
+iframe {
+  color:#4D4D4D;
+  height: 1021px;
+  width: 100%;
+  /* background-color: red; */
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2 ----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_0001.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;max-width: 1600px;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_0002.jpg'); background-size: 57%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_0003.jpg'); background-size: 79%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_0004.jpg'); background-size: 93%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_0005.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_0002.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_0005.jpg'); background-size: 60%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(6){background-image:url('../img/_loveluna/_0006.jpg'); background-size: 85%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(7){background-image:url('../img/_loveluna/_0007.jpg'); background-size: 72%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(8){background-image:url('../img/_loveluna/_0008.jpg'); background-size: 87%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size: 85%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size: 89%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size: 87%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_0001.jpg'); background-size: 72%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_0002.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_0003.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_0004.jpg'); background-size: 82%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_0005.jpg'); background-size: 69%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_0006.jpg'); background-size: 54%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_0007.jpg'); background-size: 83%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_0008.jpg'); background-size: 74%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_0009.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_0010.jpg'); background-size: 65%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_0011.jpg'); background-size: 75%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_0012.jpg'); background-size: 102%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_0001.jpg'); background-size: 89%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_0002.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_0003.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_0004.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_0005.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_0006.jpg'); background-size: 89%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(7){background-image:url('../img/_oceanpark/_0007.jpg'); background-size: 89%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_0002.jpg'); background-size: 80%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_0003.jpg'); background-size: 83%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_0004.jpg'); background-size: 84%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_0005.jpg'); background-size: 92%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_0006.jpg'); background-size: 81%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_0007.jpg'); background-size: 77%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_0008.jpg'); background-size: 84%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_0009.jpg'); background-size: 81%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(10){background-image:url('../img/_glint/_0010.jpg'); background-size: 92%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_0001.jpg'); background-size: 93%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_0002.jpg'); background-size: 93%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_0003.jpg'); background-size: 93%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_0004.jpg'); background-size: 93%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_0001.jpg'); background-size: 90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+ 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_0001.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_0002.jpg'); background-size: 64%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_0003.jpg'); background-size: 62%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_0004.jpg'); background-size: 65%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_0005.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_0001.jpg'); background-size: 70%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_0002.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_0003.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_0004.jpg'); background-size: 71%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_0005.jpg'); background-size: 62%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size: 68%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size: 59%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size: 66%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size: 72%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 13 ----------- */
+
+#gallery13 div:nth-child(1){background-image:url('../img/_mrt/_0001.jpg'); background-size: 78%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(2){background-image:url('../img/_mrt/_0002.jpg'); background-size: 68%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(3){background-image:url('../img/_mrt/_0003.jpg'); background-size: 69%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(4){background-image:url('../img/_mrt/_0004.jpg'); background-size: 73%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(5){background-image:url('../img/_mrt/_0005.jpg'); background-size: 68%; background-position: center center; background-repeat:no-repeat;}
+#gallery13 div:nth-child(6){background-image:url('../img/_mrt/_0006.jpg'); background-size: 67%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 14 ----------- */
+
+#gallery14 div:nth-child(1){background-image:url('../img/_disneymusichall/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(2){background-image:url('../img/_disneymusichall/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(3){background-image:url('../img/_disneymusichall/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(4){background-image:url('../img/_disneymusichall/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(5){background-image:url('../img/_disneymusichall/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(6){background-image:url('../img/_disneymusichall/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery14 div:nth-child(7){background-image:url('../img/_disneymusichall/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+ 
+#slider{
+    width:100%;
+    /* height:auto; */
+    background-color:#151515;
+    display:block;
+    margin-bottom: -21px;
+    /* padding-bottom: 100px; */
+    /* padding-top: 100px; */
+    z-index:-10000000;
+}
+}
+
+/* iPhone 4 ----------- */
+@mediaonly screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+@font-face {
+    font-family: 'playfair_displayitalic';
+    src: url('playserif-italic-webfont.eot');
+    src: url('playserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('playserif-italic-webfont.woff') format('woff'),
+         url('playserif-italic-webfont.ttf') format('truetype'),
+         url('playserif-italic-webfont.svg#playfair_displayitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

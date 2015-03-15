@@ -1,0 +1,910 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+body{
+    background-color:#151515;
+
+}
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    display:block;
+}
+header{
+    background-color:white;
+    height:100px;
+    width:100%;
+    position:fixed;
+    top:0px;
+    z-index:10000000;
+}
+header nav{  width:50%;position:absolute;top:50px; left:75px}
+header nav a{ text-decoration:none; width:150px; text-align: left; display:inline-block; background-color:white; color:black; font-size:.1.2em;}
+header h4{ background-color:white; width:200px; float:right; margin-top:50px; text-align:left; font-weight:700;}
+#container{
+    
+}
+#slider{
+    width:100%;
+    height:auto;
+    background-color:#151515;
+    display:block;
+    margin-top:78px;
+    z-index:-10000000;
+}
+#loading{
+    background-image: url('../img/716.GIF');
+    background-repeat: no-repeat;
+    background-position:center center;
+    width:70%; height:20%; 
+    margin:auto; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    bottom:0; right:0; 
+    padding:10px;
+    opacity:0; 
+    z-index:100000000; 
+  
+}
+#content{
+    height:auto;
+    width:80%;
+    max-width:1600px;
+    opacity:0;
+    margin-bottom:0px;
+    /*background-color: yellow;*/
+}
+#portfolio{
+    height:auto;
+}
+
+
+.textContent h1{
+    color:#f1f1fa;
+    font-weight: 200;
+}
+.textContent p{
+    font-size:1.2em;
+    font-weight:200;
+    line-height: 1.9em;
+}
+.imagery{
+    background-color:#151515;
+    padding:65px 25px 25px 25px;
+}
+.image{
+    width:100%;
+    height:900px;
+    background-color:white;
+    margin-bottom:50px;
+}
+
+#closer{
+    width:100px;
+    height:100px;
+    background-color:black;
+    float:right;
+}
+#container{
+    margin:0px auto 0px auto;
+    padding:0px;
+    z-index:-10000000;
+    height:auto;
+
+}
+
+ul{
+    margin:0px auto 0px auto;
+    padding:0px;
+}
+li {
+    list-style: none;
+    width:25%;
+    background-color:white;
+    margin:0px;
+    float:left;
+    position:relative;
+    cursor: pointer;
+
+   }
+#dimmer{
+    width:100%;
+    height:100%;
+    background-color:rgba(29,30,25,.7);
+    z-index:10000;
+}
+li div{ width:70%; height:20%; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; padding:10px;opacity:0; color:white; z-index:1000000; }
+
+li h3{width:80%; margin:auto; text-align:center; font-weight:200; font-family: 'helvetica', sans-serif; font-size: 2.5em;}
+li h4{width:80%; margin:auto; text-align:center; font-weight:200;}
+footer{
+    width:100%;
+    height:100px;
+    position:fixed;
+    bottom:0px;
+    overflow: hidden;
+   
+    z-index:100000;
+}
+#footHold{
+    width:100%;
+    height:100px;
+    background-color:white;
+    position:absolute;
+    bottom:-100px;
+    z-index:10000000;
+
+}
+#footHold nav{
+    width:300px;
+    height:50px;
+    float:right;
+    margin-top:25px;
+}
+.icon{
+    width:45px;
+    height:45px;
+    float:left;
+    margin-left:5px;
+    background-repeat:no-repeat;
+    background-size:80%; 
+    background-position:center center;
+}
+#twitter{background-image:url('../img/_icons/_0001.png');}
+#facebook{background-image:url('../img/_icons/_0002.png');}
+#skype{background-image:url('../img/_icons/_0003.png');}
+#linkedin{background-image:url('../img/_icons/_0004.png');}
+#email{background-image:url('../img/_icons/_0005.png');}
+
+li:nth-child(1){background-image:url('../img/indexpage/_001.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(2){background-image:url('../img/indexpage/_0002.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(3){background-image:url('../img/indexpage/_0003.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(4){background-image:url('../img/indexpage/_0004.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(5){background-image:url('../img/indexpage/_0005.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(6){background-image:url('../img/indexpage/_0006.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(7){background-image:url('../img/indexpage/_0007.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(8){background-image:url('../img/indexpage/_0008.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+  li:nth-child(9){background-image:url('../img/indexpage/_0009.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(10){background-image:url('../img/indexpage/_0010.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(11){background-image:url('../img/indexpage/_0011.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+li:nth-child(12){background-image:url('../img/indexpage/_0012.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center center;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 1 ----------- */
+
+#gallery1 div:nth-child(1){background-image:url('../img/_photoplus/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(2){background-image:url('../img/_photoplus/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(3){background-image:url('../img/_photoplus/_0003.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(4){background-image:url('../img/_photoplus/_0004.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery1 div:nth-child(5){background-image:url('../img/_photoplus/_0005.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 2 ----------- */
+
+#gallery2 div:nth-child(1){background-image:url('../img/_allure/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(2){background-image:url('../img/_allure/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(3){background-image:url('../img/_allure/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(4){background-image:url('../img/_allure/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery2 div:nth-child(5){background-image:url('../img/_allure/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 3 ----------- */
+
+#gallery3 div:nth-child(1){background-image:url('../img/_loveluna/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(2){background-image:url('../img/_loveluna/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(3){background-image:url('../img/_loveluna/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(4){background-image:url('../img/_loveluna/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery3 div:nth-child(5){background-image:url('../img/_loveluna/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 4 ----------- */
+
+#gallery4 div:nth-child(1){background-image:url('../img/_ymca/_0001.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(2){background-image:url('../img/_ymca/_0002.jpg'); background-size:80%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(3){background-image:url('../img/_ymca/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(4){background-image:url('../img/_ymca/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(5){background-image:url('../img/_ymca/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery4 div:nth-child(6){background-image:url('../img/_ymca/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 5 ----------- */
+
+#gallery5 div:nth-child(1){background-image:url('../img/_hospital/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(2){background-image:url('../img/_hospital/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(3){background-image:url('../img/_hospital/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(4){background-image:url('../img/_hospital/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(5){background-image:url('../img/_hospital/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(6){background-image:url('../img/_hospital/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(7){background-image:url('../img/_hospital/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(8){background-image:url('../img/_hospital/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(9){background-image:url('../img/_hospital/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(10){background-image:url('../img/_hospital/_0010.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(11){background-image:url('../img/_hospital/_0011.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery5 div:nth-child(12){background-image:url('../img/_hospital/_0012.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 6 ----------- */
+
+#gallery6 div:nth-child(1){background-image:url('../img/_oceanpark/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(2){background-image:url('../img/_oceanpark/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(3){background-image:url('../img/_oceanpark/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(4){background-image:url('../img/_oceanpark/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(5){background-image:url('../img/_oceanpark/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery6 div:nth-child(6){background-image:url('../img/_oceanpark/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 7 ----------- */
+
+#gallery7 div:nth-child(1){background-image:url('../img/_glint/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(2){background-image:url('../img/_glint/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(3){background-image:url('../img/_glint/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(4){background-image:url('../img/_glint/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(5){background-image:url('../img/_glint/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(6){background-image:url('../img/_glint/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(7){background-image:url('../img/_glint/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(8){background-image:url('../img/_glint/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery7 div:nth-child(9){background-image:url('../img/_glint/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 8 ----------- */
+
+#gallery8 div:nth-child(1){background-image:url('../img/_digital_imaging/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(2){background-image:url('../img/_digital_imaging/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(3){background-image:url('../img/_digital_imaging/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery8 div:nth-child(4){background-image:url('../img/_digital_imaging/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 9 ----------- */
+
+#gallery9 div:nth-child(1){background-image:url('../img/_photography/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(2){background-image:url('../img/_photography/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(3){background-image:url('../img/_photography/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(4){background-image:url('../img/_photography/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(5){background-image:url('../img/_photography/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(6){background-image:url('../img/_photography/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(7){background-image:url('../img/_photography/_0007.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(8){background-image:url('../img/_photography/_0008.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(9){background-image:url('../img/_photography/_0009.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery9 div:nth-child(10){background-image:url('../img/_photography/_0010.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 10 ----------- */
+
+#gallery10 div:nth-child(1){background-image:url('../img/_motiongfx/_0001.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(2){background-image:url('../img/_motiongfx/_0002.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(3){background-image:url('../img/_motiongfx/_0003.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(4){background-image:url('../img/_motiongfx/_0004.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(5){background-image:url('../img/_motiongfx/_0005.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+#gallery10 div:nth-child(6){background-image:url('../img/_motiongfx/_0006.jpg'); background-size:90%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 11 ----------- */
+
+#gallery11 div:nth-child(1){background-image:url('../img/_music/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(2){background-image:url('../img/_music/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(3){background-image:url('../img/_music/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(4){background-image:url('../img/_music/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(5){background-image:url('../img/_music/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(6){background-image:url('../img/_music/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(7){background-image:url('../img/_music/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery11 div:nth-child(8){background-image:url('../img/_music/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------Gallery 12 ----------- */
+
+#gallery12 div:nth-child(1){background-image:url('../img/_random/_0001.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(2){background-image:url('../img/_random/_0002.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(3){background-image:url('../img/_random/_0003.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(4){background-image:url('../img/_random/_0004.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(5){background-image:url('../img/_random/_0005.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(6){background-image:url('../img/_random/_0006.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(7){background-image:url('../img/_random/_0007.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(8){background-image:url('../img/_random/_0008.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+#gallery12 div:nth-child(9){background-image:url('../img/_random/_0009.jpg'); background-size:100%; background-position: center center; background-repeat:no-repeat;}
+
+
+label{
+    color:red;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    header{
+        background-color:orange;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-device-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-device-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+    header{
+        background-color:green;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+    
+
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-width : 320px) and (max-width : 480px) {
+/* Styles */
+    header{
+        /*background-color:orange;*/
+    }
+    header nav{
+        top:0px;
+        width:90%;
+        margin:0px auto 0px auto;
+    }
+    header nav a{
+        width:50px;
+    }
+    li{
+        width:25%;
+        height:93px;
+    }
+    li div{  width:90%; height:40%; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; padding:10px;}
+    li h3{width:100%; margin: auto; text-align:center; font-size:.7em;}
+    li h4{width:100%; margin: auto; text-align:center; font-size:.5em; visibility: hidden;}
+    #content{
+        width:100%;
+    }
+    .textContent{
+        width:100%;
+        background-color:#151515;
+        color:#5f5f63;
+        padding:15px;
+    }
+    .textContent h1{
+        font-size:1em;
+    }
+    .textContent p{
+        font-size: .8em;
+        line-height: 1.1em;
+    }
+    .imagery{
+        position: relative;
+        width:100%;
+        padding:0px;
+        background-color:#FDFDFD;
+    }
+    .image{
+    width:100%;
+    height:306px;
+    background-color:#FDFDFD;
+    background-size:100%;
+    }
+}
+
+@media (min-width : 481px) and (max-width : 761px) {
+/* Styles */
+    header{
+        /*background-color:orange;*/
+    }
+    header nav{
+        top:0px;
+        width:90%;
+        margin:0px auto 0px auto;
+    }
+    header nav a{
+        width:50px;
+    }
+    li{
+        width:100%;
+        min-height:350px;
+        float:none;
+    }
+    #content{
+        width:100%;
+    }
+    .textContent{
+        width:100%;
+        background-color:#151515;
+        color:#5f5f63;
+        padding:35px;
+    }
+    .imagery{
+        position: relative;
+        width:100%;
+        padding:25px;
+    }
+    .image{
+        height:390px;
+        margin-bottom: 25px;
+    }
+   
+   
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width : 762px) and (max-width : 1223px) {
+/* Styles */
+    header{
+        /*background-color:green;*/
+    }
+    header nav{
+        width:700px;
+    }
+    header nav a{
+        width:100px;
+    }
+    li{
+        width:50%;
+        min-height:359px;
+    }
+    #content{
+        width:100%;
+    }
+    .textContent{
+    width:100%;
+    background-color:#151515;
+    height:800px;
+    color:#5f5f63;
+    padding:35px;
+    }
+    .imagery{
+    width: 100%;
+    padding:65px 25px 25px 25px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media  (min-width : 1224px) and (max-width : 1883px) {
+/* Styles */
+    header{
+        /*background-color:yellow;*/
+    }
+    li{
+        width:33.33%;
+        min-height:384px;
+    }
+    .textContent{
+    width:70%;
+    background-color:#151515;
+    height:auto;
+    
+    color:#5f5f63;
+    padding:35px;
+    }
+    .imagery{
+    width: 100%;
+   
+    padding:65px 25px 25px 25px;
+    }
+}
+
+  
+
+/* Large screens ----------- */
+@media  screen and (min-width : 1884px) {
+/* Styles */
+    header{
+        /*background-color:red;*/
+    }
+    #portfolio{
+        width:100%;
+    }
+    li {
+    list-style: none;
+    width:25%;
+    min-height:440px;
+    background-color:white;
+    margin:0px;
+    float:left;
+    position:relative;
+    cursor: pointer;;
+    }
+    .textContent{
+    float:left;
+    max-width:475px;
+    background-color:#151515;
+    height:800px;
+    color:#5f5f63;
+    padding:35px;
+    }
+    .imagery{
+    width: 70%;
+    max-width:1650px;
+    float:left;
+    padding:65px 25px 25px 25px;
+    }
+
+}
+
+/* iPhone 4 ----------- */
+@mediaonly screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'playfair_displayitalic';
+    src: url('playserif-italic-webfont.eot');
+    src: url('playserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('playserif-italic-webfont.woff') format('woff'),
+         url('playserif-italic-webfont.ttf') format('truetype'),
+         url('playserif-italic-webfont.svg#playfair_displayitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
